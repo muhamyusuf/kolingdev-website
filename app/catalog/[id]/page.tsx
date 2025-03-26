@@ -1,4 +1,4 @@
-import { MessageCircleIcon, MoveLeftIcon } from "lucide-react";
+import { MoveLeftIcon } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,40 +12,44 @@ interface CatalogProps {
   details: string;
 }
 
-const phoneNumber = "6285664813597";
+const phoneNumber = "6281585040671";
 
 const catalogList: CatalogProps[] = [
   {
-    id: "batu-nisan",
-    image: "/catalog/nisan-custom.jpg",
-    title: "Batu Nisan",
+    id: "gpt-shared-harian",
+    image: "/shared-harian.png",
+    title: "Akun GPT Shared Harian",
     description:
-      "Batu nisan custom nama granit berkualitas tinggi dengan berbagai desain elegan dan tahan lama.",
-    details: "Batu nisan custom dengan berbagai pilihan desain dan material.",
+      "Akses cepat ke ChatGPT Plus (GPT-4) untuk kebutuhan harian. Cocok untuk uji coba, tugas, atau keperluan mendesak.",
+    details:
+      "Dapatkan akses instan ke GPT-4 dengan harga terjangkau. Tidak ada batasan waktu penggunaan selama 24 jam.",
   },
   {
-    id: "prasasti-peresmian",
-    image: "/catalog/marmer-peresmian.jpg",
-    title: "Prasasti Peresmian",
+    id: "gpt-shared-bulanan",
+    image: "/shared-bulanan.png",
+    title: "Akun GPT Shared Bulanan",
     description:
-      "Pembuatan prasasti untuk peresmian gedung, tempat ibadah, dan fasilitas umum dengan ukiran berkualitas.",
-    details: "Prasasti peresmian dengan berbagai pilihan bahan dan ukiran.",
+      "Langganan hemat akun GPT-4 shared dengan akses full fitur. Stabil, anti limit, dan tersedia setiap saat.",
+    details:
+      "Paket langganan bulanan yang ideal untuk pengguna rutin. Dapatkan akses stabil tanpa batas.",
   },
   {
-    id: "ukiran-nama-dan-doa",
-    image: "/catalog/granit-custom-nama.jpg",
-    title: "Ukiran Nama & Doa",
+    id: "gpt-private-premium",
+    image: "/poster-katalog.png",
+    title: "Akun GPT Premium Private",
     description:
-      "Ukiran nama dan doa yang presisi dengan berbagai pilihan gaya tulisan, bahan, dan hiasan.",
-    details: "Ukiran nama dan doa dengan berbagai pilihan desain dan material.",
+      "Akun pribadi GPT-4 Plus dengan akses eksklusif. Full control, anti limit, cocok untuk profesional & power user.",
+    details:
+      "Solusi premium untuk pengguna profesional. Nikmati privasi dan kontrol penuh atas akun Anda.",
   },
   {
-    id: "restorasi-nisan",
-    image: "/catalog/bersihkan-nisan.jpg",
-    title: "Restorasi & Bersikan Batu Nisan",
+    id: "gpt-enterprise-team",
+    image: "/poster-katalog.png",
+    title: "GPT Team / Enterprise",
     description:
-      "Layanan perbaikan, restorasi, dan pembersihan batu nisan lama agar kembali terlihat seperti baru.",
-    details: "Layanan perbaikan dan restorasi batu nisan lama.",
+      "Layanan GPT khusus tim, startup, atau instansi. Termasuk manajemen akun, billing, dan support eksklusif.",
+    details:
+      "Didesain untuk organisasi besar. Dapatkan dukungan penuh untuk tim Anda, termasuk billing dan manajemen akun.",
   },
 ];
 
@@ -65,7 +69,7 @@ export function generateMetadata({
   if (!product) return {};
 
   return {
-    title: `${product.title} - INSANI Batu Nisan & Prasasti`,
+    title: `${product.title} - KolingDev`,
     description: product.description,
     openGraph: {
       title: product.title,
@@ -80,7 +84,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
 
   if (!product) return notFound();
 
-  const whatsappMessage = `Halo, saya tertarik dengan produk *${product.title}*. Bisakah saya mendapatkan informasi lebih lanjut?`;
+  const whatsappMessage = `Halo, saya tertarik dengan produk *${product.title}*. Bisakah saya mendapatkan informasi lebih lanjut tentang paket ini?`;
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
     whatsappMessage
   )}`;
@@ -98,7 +102,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       <section className="container pb-24">
         {/* Link kembali ke Landing Page */}
 
-        <h2 className="text-lg text-center mb-2 mt-10">Katalog Produk</h2>
+        <h2 className="text-lg text-center mb-2 mt-10">Katalog Produk {product.title}</h2>
 
         <div className="max-w-4xl mx-auto text-center">
           <Image
@@ -121,16 +125,11 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 text-white bg-green-500 rounded-lg shadow hover:bg-green-600 transition text-sm sm:text-base"
+            className="mt-6 inline-flex items-center px-4 py-2 text-white bg-primary rounded-lg shadow hover:bg-primary/90 transition text-sm sm:text-base gap-2"
           >
-            <Image
-              src={"/WhatsApp.svg"}
-              alt="WhatsApp Insani"
-              width={30}
-              height={30}
-              className="mr-2 sm:w-9 sm:h-9"
-            />
-            <span className="text-xs sm:text-sm md:text-base lg:text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
+
+            <span className="text-xs sm:text-sm">
               Pesan Produk Sekarang
             </span>
           </a>

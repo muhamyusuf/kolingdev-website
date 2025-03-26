@@ -78,13 +78,13 @@ export const Navbar = () => {
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center gap-2 tracking-tighter">
-        {/* <Image
-          src="/logo-insani.png"
+        <Image
+          src="/logo-kolingdev.png"
           alt="insani-logo"
           className="w-10 h-10 rounded-md object-cover"
           width={40}
           height={40}
-        /> */}
+        />
         KolingDEV.
       </Link>
 
@@ -110,13 +110,13 @@ export const Navbar = () => {
                     className="font-bold text-lg flex items-center gap-2"
                   >
                     <Image
-                      src="/logo-insani.png"
+                      src="/logo-kolingdev.png"
                       alt="insani-logo"
                       className="w-10 h-10 rounded-md object-cover"
                       width={40}
                       height={40}
                     />
-                    INSANI
+                    KolingDEV.
                   </Link>
                 </SheetTitle>
               </SheetHeader>

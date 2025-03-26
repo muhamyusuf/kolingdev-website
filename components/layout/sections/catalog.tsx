@@ -13,28 +13,28 @@ interface CatalogProps {
 const catalogList: CatalogProps[] = [
   {
     id: "gpt-shared-harian",
-    image: "/catalog/gpt-shared-harian.jpg",
+    image: "/shared-harian.png",
     title: "Akun GPT Shared Harian",
     description:
       "Akses cepat ke ChatGPT Plus (GPT-4) untuk kebutuhan harian. Cocok untuk uji coba, tugas, atau keperluan mendesak.",
   },
   {
     id: "gpt-shared-bulanan",
-    image: "/catalog/gpt-shared-bulanan.jpg",
+    image: "/shared-bulanan.png",
     title: "Akun GPT Shared Bulanan",
     description:
       "Langganan hemat akun GPT-4 shared dengan akses full fitur. Stabil, anti limit, dan tersedia setiap saat.",
   },
   {
     id: "gpt-private-premium",
-    image: "/catalog/gpt-private-premium.jpg",
+    image: "/poster-katalog.png",
     title: "Akun GPT Premium Private",
     description:
       "Akun pribadi GPT-4 Plus dengan akses eksklusif. Full control, anti limit, cocok untuk profesional & power user.",
   },
   {
     id: "gpt-enterprise-team",
-    image: "/catalog/gpt-enterprise.jpg",
+    image: "/poster-katalog.png",
     title: "GPT Team / Enterprise",
     description:
       "Layanan GPT khusus tim, startup, atau instansi. Termasuk manajemen akun, billing, dan support eksklusif.",
@@ -67,7 +67,7 @@ export const CatalogSection = () => {
                   width={500}
                   height={400}
                   alt={title}
-                  className="w-full h-52 object-cover transition-all duration-300 hover:opacity-80"
+                  className="w-full h-full object-cover transition-all duration-300 hover:opacity-80"
                 />
               </div>
 
