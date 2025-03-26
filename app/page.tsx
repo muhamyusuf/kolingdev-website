@@ -18,13 +18,13 @@ export const metadata = {
     "Butuh ChatGPT Plus tapi tanpa batasan? KolingDev jual akun ChatGPT GPT-4 premium anti limit dengan full garansi. Bisa akses semua model premium: GPT-4, GPT-4 Turbo, DALL·E, dan lainnya!",
   openGraph: {
     type: "website",
-    url: "https://koling.dev",
+    url: "https://www.kolingdev.me/",
     title: "KolingDev - Akun ChatGPT Premium Anti Limit & Full Garansi",
     description:
       "Dapatkan akun ChatGPT Plus (GPT-4) siap pakai dari KolingDev. Anti limit, full garansi, dan akses lengkap ke semua fitur premium seperti GPT-4 Turbo, DALL·E, dan lainnya.",
     images: [
       {
-        url: "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/kolingdev-chatgpt.jpg",
+        url: "/banner.jpg",
         width: 1200,
         height: 630,
         alt: "KolingDev - ChatGPT Premium Anti Limit",
@@ -33,12 +33,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://koling.dev",
+    site: "https://www.kolingdev.me/",
     title: "KolingDev - Jual Akun ChatGPT GPT-4 Anti Limit",
     description:
       "Akun ChatGPT Plus anti limit dengan akses penuh ke GPT-4, GPT-4 Turbo, DALL·E, Code Interpreter, dan lainnya. Full garansi dan support cepat. Beli di KolingDev sekarang!",
     images: [
-      "https://res.cloudinary.com/dbzv9xfjp/image/upload/v1723499276/og-images/kolingdev-chatgpt.jpg",
+      "/banner.jpg",
     ],
   },
 };
