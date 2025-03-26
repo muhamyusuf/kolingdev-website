@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
+const phoneNumber = "6281585040671";
+
 enum PopularPlan {
   NO = 0,
   YES = 1,
@@ -18,6 +20,7 @@ interface PlanProps {
   title: string;
   popular: PopularPlan;
   price: number;
+  originalPrice: number;
   duration: string;
   description: string;
   buttonText: string;
@@ -29,6 +32,7 @@ const plans: PlanProps[] = [
     title: "Harian",
     popular: 0,
     price: 5000,
+    originalPrice: 20000,
     duration: " /hari",
     description: "Akses ChatGPT Premium harian, cocok untuk kebutuhan cepat.",
     buttonText: "Beli Sekarang",
@@ -44,6 +48,7 @@ const plans: PlanProps[] = [
     title: "Mingguan",
     popular: 1,
     price: 10000,
+    originalPrice: 40000,
     duration: " /minggu",
     description:
       "Paket hemat mingguan dengan fitur lengkap dan stabilitas terbaik.",
@@ -60,6 +65,7 @@ const plans: PlanProps[] = [
     title: "Bulanan",
     popular: 0,
     price: 30000,
+    originalPrice: 100000,
     duration: " /bulan",
     description:
       "Paket paling ekonomis untuk pemakaian rutin dan produktif setiap hari.",
@@ -91,53 +97,76 @@ export const PricingSection = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
         {plans.map(
-          ({ title, popular, price, duration, description, buttonText, benefitList }) => (
-            <Card
-              key={title}
-              className={
-                popular === PopularPlan.YES
-                  ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.05]"
-                  : ""
-              }
-            >
-              <CardHeader>
-                <CardTitle className="pb-2">{title}</CardTitle>
+          ({
+            title,
+            popular,
+            price,
+            originalPrice,
+            duration,
+            description,
+            buttonText,
+            benefitList,
+          }) => {
+            const whatsappMessage = `Halo, saya tertarik dengan paket CHATGPT Premium *${title}*. Bisa dibantu kak?`;
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+              whatsappMessage
+            )}`;
 
-                <CardDescription className="pb-4">
-                  {description}
-                </CardDescription>
+            return (
+              <Card
+                key={title}
+                className={
+                  popular === PopularPlan.YES
+                    ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.05]"
+                    : ""
+                }
+              >
+                <CardHeader>
+                  <CardTitle className="pb-2">{title}</CardTitle>
 
-                <div>
-                  <span className="text-3xl font-bold">
-                    Rp{price.toLocaleString("id-ID")}
-                  </span>
-                  <span className="text-muted-foreground">{duration}</span>
-                </div>
-              </CardHeader>
+                  <CardDescription className="pb-4">
+                    {description}
+                  </CardDescription>
 
-              <CardContent className="flex">
-                <div className="space-y-4">
-                  {benefitList.map((benefit) => (
-                    <span key={benefit} className="flex">
-                      <Check className="text-primary mr-2" />
-                      <h3>{benefit}</h3>
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-muted-foreground line-through text-base">
+                        Rp{originalPrice.toLocaleString("id-ID")}
+                      </span>
+                      <span className="text-3xl font-bold text-primary">
+                        Rp{price.toLocaleString("id-ID")}
+                      </span>
+                    </div>
+                    <span className="text-muted-foreground">{duration}</span>
+                  </div>
+                </CardHeader>
 
-              <CardFooter>
-                <Button
-                  variant={
-                    popular === PopularPlan.YES ? "default" : "secondary"
-                  }
-                  className="w-full"
-                >
-                  {buttonText}
-                </Button>
-              </CardFooter>
-            </Card>
-          )
+                <CardContent className="flex">
+                  <div className="space-y-4">
+                    {benefitList.map((benefit) => (
+                      <span key={benefit} className="flex">
+                        <Check className="text-primary mr-2" />
+                        <h3>{benefit}</h3>
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+
+                <CardFooter>
+                  <a href={whatsappUrl} target="_blank" className="w-full">
+                    <Button
+                      variant={
+                        popular === PopularPlan.YES ? "default" : "secondary"
+                      }
+                      className="w-full"
+                    >
+                      {buttonText}
+                    </Button>
+                  </a>
+                </CardFooter>
+              </Card>
+            );
+          }
         )}
       </div>
     </section>

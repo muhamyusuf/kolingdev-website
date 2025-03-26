@@ -24,7 +24,7 @@ export const metadata = {
       "Dapatkan akun ChatGPT Plus (GPT-4) siap pakai dari KolingDev. Anti limit, full garansi, dan akses lengkap ke semua fitur premium seperti GPT-4 Turbo, DALL·E, dan lainnya.",
     images: [
       {
-        url: "/banner.jpg",
+        url: "https://www.kolingdev.me/_next/image?url=%2Fbanner.jpg&w=1200&q=75",
         width: 1200,
         height: 630,
         alt: "KolingDev - ChatGPT Premium Anti Limit",
@@ -38,7 +38,7 @@ export const metadata = {
     description:
       "Akun ChatGPT Plus anti limit dengan akses penuh ke GPT-4, GPT-4 Turbo, DALL·E, Code Interpreter, dan lainnya. Full garansi dan support cepat. Beli di KolingDev sekarang!",
     images: [
-      "/banner.jpg",
+      "https://www.kolingdev.me/_next/image?url=%2Fbanner.jpg&w=1200&q=75",
     ],
   },
 };
