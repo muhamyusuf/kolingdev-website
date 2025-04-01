@@ -109,7 +109,7 @@ export const TestimonialSection = () => {
                 <CardHeader>
                   <div className="flex flex-row items-center gap-4">
                     <Avatar>
-                      <AvatarImage src={review.image} alt={review.name} />
+                      {/* <AvatarImage src={review.image} alt={review.name} /> */}
                       <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
                     </Avatar>
 
