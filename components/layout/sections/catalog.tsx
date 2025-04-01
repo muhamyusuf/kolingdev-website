@@ -19,25 +19,18 @@ const catalogList: CatalogProps[] = [
       "Akses cepat ke ChatGPT Plus (GPT-4) untuk kebutuhan harian. Cocok untuk uji coba, tugas, atau keperluan mendesak.",
   },
   {
+    id: "gpt-shared-mingguan",
+    image: "/poster-katalog.png",
+    title: "Akun GPT Shared Mingguan",
+    description:
+      "Cocok untuk penggunaan jangka pendek atau pekerjaan sementara. Akses penuh ke GPT-4 dan fitur premium lainnya.",
+  },
+  {
     id: "gpt-shared-bulanan",
     image: "/shared-bulanan.png",
     title: "Akun GPT Shared Bulanan",
     description:
-      "Langganan hemat akun GPT-4 shared dengan akses full fitur. Stabil, anti limit, dan tersedia setiap saat.",
-  },
-  {
-    id: "gpt-private-premium",
-    image: "/poster-katalog.png",
-    title: "Akun GPT Premium Private",
-    description:
-      "Akun pribadi GPT-4 Plus dengan akses eksklusif. Full control, anti limit, cocok untuk profesional & power user.",
-  },
-  {
-    id: "gpt-enterprise-team",
-    image: "/poster-katalog.png",
-    title: "GPT Team / Enterprise",
-    description:
-      "Layanan GPT khusus tim, startup, atau instansi. Termasuk manajemen akun, billing, dan support eksklusif.",
+      "Langganan hemat akun GPT-4(Akses semua model) shared dengan akses full fitur. Stabil, anti limit, full garansi, dan tersedia setiap saat.",
   },
 ];
 

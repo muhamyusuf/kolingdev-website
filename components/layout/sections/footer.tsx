@@ -52,7 +52,7 @@ export const FooterSection = () => {
           <div className="flex flex-col gap-2">
             <h3 className="font-bold text-lg">Bantuan</h3>
             <div>
-              <Link href="#contact" className="opacity-60 hover:opacity-100">
+              <Link href="#footer" className="opacity-60 hover:opacity-100">
                 Hubungi Kami
               </Link>
             </div>
