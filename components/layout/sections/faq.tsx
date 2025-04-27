@@ -33,7 +33,7 @@ const FAQList: FAQProps[] = [
   {
     question: "Apakah layanan ini bergaransi?",
     answer:
-      "Tentu! Setiap pembelian dilindungi garansi penuh sesuai durasi yang kamu pilih. Jika ada masalah, kamu bisa langsung hubungi admin.",
+      "Tentu! 100% Setiap pembelian dilindungi garansi penuh sesuai durasi yang kamu pilih. Jika ada masalah, kamu bisa langsung hubungi admin.",
     value: "item-4",
   },
   {

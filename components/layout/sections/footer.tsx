@@ -47,6 +47,16 @@ export const FooterSection = () => {
                 X - Twitter
               </Link>
             </div>
+
+            <div>
+              <Link
+                href="https://www.instagram.com/kolingdev/"
+                target="_blank"
+                className="opacity-60 hover:opacity-100"
+              >
+                Instagram - KolingDev
+              </Link>
+            </div>
           </div>
 
           <div className="flex flex-col gap-2">

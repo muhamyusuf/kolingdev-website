@@ -13,21 +13,21 @@ interface CatalogProps {
 const catalogList: CatalogProps[] = [
   {
     id: "gpt-shared-harian",
-    image: "/shared-harian.png",
+    image: "/catalog/GPT Shared Harian.png",
     title: "Akun GPT Shared Harian",
     description:
       "Akses cepat ke ChatGPT Plus (GPT-4) untuk kebutuhan harian. Cocok untuk uji coba, tugas, atau keperluan mendesak.",
   },
   {
     id: "gpt-shared-mingguan",
-    image: "/poster-katalog.png",
+    image: "/catalog/GPT Shared Mingguan.png",
     title: "Akun GPT Shared Mingguan",
     description:
       "Cocok untuk penggunaan jangka pendek atau pekerjaan sementara. Akses penuh ke GPT-4 dan fitur premium lainnya.",
   },
   {
     id: "gpt-shared-bulanan",
-    image: "/shared-bulanan.png",
+    image: "/catalog/GPT Shared Bulanan.png",
     title: "Akun GPT Shared Bulanan",
     description:
       "Langganan hemat akun GPT-4(Akses semua model) shared dengan akses full fitur. Stabil, anti limit, full garansi, dan tersedia setiap saat.",

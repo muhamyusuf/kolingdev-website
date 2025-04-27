@@ -17,7 +17,7 @@ const phoneNumber = "6281585040671";
 const catalogList: CatalogProps[] = [
   {
     id: "gpt-shared-harian",
-    image: "/shared-harian.png",
+    image: "/catalog/GPT Shared Harian.png",
     title: "Akun GPT Shared Harian",
     description:
       "Akses cepat ke ChatGPT Plus (GPT-4) untuk kebutuhan harian. Cocok untuk uji coba, tugas, atau keperluan mendesak.",
@@ -25,31 +25,22 @@ const catalogList: CatalogProps[] = [
       "Dapatkan akses instan ke GPT-4 dengan harga terjangkau. Tidak ada batasan waktu penggunaan selama 24 jam.",
   },
   {
-    id: "gpt-shared-bulanan",
-    image: "/shared-bulanan.png",
-    title: "Akun GPT Shared Bulanan",
+    id: "gpt-shared-mingguan",
+    image: "/catalog/GPT Shared Mingguan.png",
+    title: "Akun GPT Shared Mingguan",
     description:
-      "Langganan hemat akun GPT-4 shared dengan akses full fitur. Stabil, anti limit, dan tersedia setiap saat.",
+      "Cocok untuk penggunaan jangka pendek atau pekerjaan sementara. Akses penuh ke GPT-4 dan fitur premium lainnya.",
     details:
       "Paket langganan bulanan yang ideal untuk pengguna rutin. Dapatkan akses stabil tanpa batas.",
   },
   {
-    id: "gpt-private-premium",
-    image: "/poster-katalog.png",
-    title: "Akun GPT Premium Private",
+    id: "gpt-shared-bulanan",
+    image: "/catalog/GPT Shared Bulanan.png",
+    title: "Akun GPT Shared Bulanan",
     description:
-      "Akun pribadi GPT-4 Plus dengan akses eksklusif. Full control, anti limit, cocok untuk profesional & power user.",
+      "Langganan hemat akun GPT-4(Akses semua model) shared dengan akses full fitur. Stabil, anti limit, full garansi, dan tersedia setiap saat.",
     details:
-      "Solusi premium untuk pengguna profesional. Nikmati privasi dan kontrol penuh atas akun Anda.",
-  },
-  {
-    id: "gpt-enterprise-team",
-    image: "/poster-katalog.png",
-    title: "GPT Team / Enterprise",
-    description:
-      "Layanan GPT khusus tim, startup, atau instansi. Termasuk manajemen akun, billing, dan support eksklusif.",
-    details:
-      "Didesain untuk organisasi besar. Dapatkan dukungan penuh untuk tim Anda, termasuk billing dan manajemen akun.",
+      "Paket langganan bulanan yang ideal untuk pengguna rutin. Dapatkan akses stabil tanpa batas.",
   },
 ];
 
@@ -92,7 +83,7 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
   return (
     <div>
       <Link
-        href="/"
+        href="/#catalog"
         className="flex items-center text-muted-foreground hover:text-primary transition mt-10 px-2"
       >
         <MoveLeftIcon className="size-5 mr-2" />
@@ -100,8 +91,6 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
       </Link>
 
       <section className="container pb-24">
-        {/* Link kembali ke Landing Page */}
-
         <h2 className="text-lg text-center mb-2 mt-10">Katalog Produk {product.title}</h2>
 
         <div className="max-w-4xl mx-auto text-center">
